@@ -225,6 +225,15 @@ input:focus {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+.videos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px
+
+}
+
 @media screen and (max-width: 1000px) {
   #overlay {
     display: none;
@@ -307,9 +316,6 @@ input:focus {
     text-align: center;
   }
   
-  .text-by-image {
-
-  }
   .text-with-image {
    display: flex;
    flex-direction: column;
