@@ -114,7 +114,7 @@ p {
 
 #add-container {
   position: fixed;
-  right: -165px;
+  right: -175px;
   top: 10px;
   display: flex;
   gap: 30px;
@@ -257,7 +257,7 @@ input:focus {
 
   #add-container {
     position: fixed;
-    right: -165px;
+    right: -1995px;
     top: 10px;
     display: flex;
     gap: 30px;
