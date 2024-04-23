@@ -4,7 +4,7 @@ const symbol = "AAPL";
 
 
 function getStockPrice(symbol) {
-    return fetch(`https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${apiKey}`)
+    return fetch(`https://finnhub.io/api/v1/quote?symbol=${symbol}&token=${apiKey}s`)
         .then(response => response.json())
         .then(data => {
             return data;
