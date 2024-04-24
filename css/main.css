@@ -6,14 +6,20 @@ header {
   text-align: center;
   color: white;
   font-style: italic;
-  padding: 10px;
+  padding: 10px 0 10px 0;
   font-weight: bold;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 0px;
+  display: inherit;
+
+
 }
 
 header h1 {
   padding: 0;
   margin: 0;
+  font-size: xx-large;
+  text-shadow: none;
 }
 #about {
   display: none;
@@ -25,13 +31,50 @@ header button {
   color: white;
   transition: background-color 0.5s;
   padding: 10px;
-  border-radius: 3px;
+  border: none;
+  display: flex;
+  gap:15px;
+  text-shadow: none ;
+  box-shadow: none;
+}
+header button:hover {
+  text-shadow: none;
+  box-shadow: none;
 }
 
 #dashBoardButton {
     background-color: #494949;
 }
 
+#theme-toggle {
+  position: absolute;
+  right: 50px;
+  border-style: solid;
+  border-width: 0;
+  width: 30px;
+  height:17px;
+  background-color: #cccccc;
+  border-radius: 3px;
+
+}
+
+#theme-toggle  input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#slider {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 3px;
+}
 
 
 figure {
@@ -50,7 +93,9 @@ figcaption {
 }
 
 header button:hover {
-  background-color: #3d3d3d;
+  background-color: #3d3d3d !important;
+  border: none;
+  text-shadow: none;
 }
 
 .image-in-text {
@@ -76,6 +121,9 @@ main {
   padding: 20px;
   min-height: calc(100% - 200px);
   margin: 0px;
+  background-color: white;
+  color: black;
+
 }
 
 #card-listing {
@@ -112,6 +160,14 @@ p {
     text-indent: 1em; 
 }
 
+#inputField {
+  position: absolute;
+  right: 100px;
+  top: 10px;
+
+}
+
+
 #add-container {
   position: fixed;
   right: -175px;
@@ -143,7 +199,8 @@ p {
   padding: 500px;
 }
 
-#logo {
+.logo {
+  display: inline;
   color: white;
   scale: 1.5;
 }
@@ -159,7 +216,28 @@ p {
   gap: 10px;
 }
 
+#inputField {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: small;
+  background-color: #ffffff;
+  color: #000000;
+  width: 150px;
+}
+
+#inputField::placeholder {
+  color: #777777;
+}
+
+#inputField:focus {
+  outline: none;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
 .card {
+  background: none;
   background-color: rgb(241, 241, 241);
   padding: 20px;
   border-style: solid;
@@ -187,6 +265,10 @@ footer {
   color: white;
   padding: 30px;
   margin: 0px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 button {
@@ -194,6 +276,8 @@ button {
   border: none;
   cursor: pointer;
   width: fit-content;
+  font-family: "Ubuntu", sans-serif;
+  ;
 }
 
 nav {
@@ -205,6 +289,7 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  margin-left: 10px;
 }
 
 header ul {
@@ -235,6 +320,10 @@ input:focus {
 }
 
 @media screen and (max-width: 1000px) {
+
+  #inputField {
+    display: none;
+  }
   #overlay {
     display: none;
     position: fixed;

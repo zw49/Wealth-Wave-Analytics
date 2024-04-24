@@ -1,0 +1,97 @@
+
+main {
+    padding: 300px 20px 20px 20px;
+    min-height: calc(100% - 200px);
+    margin: 0px;
+    background-color: black;
+    color: white;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: "Jersey 10", sans-serif;
+  }
+
+
+header {
+    top: 0;
+    z-index: 1000;
+    position: absolute;
+    background-color: #ffffff00;
+    text-align: center;
+    color: #01c5cc;
+    font-style: normal;
+    padding: 10px;
+    font-weight: bold;
+    box-shadow: none;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  header h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 4.5rem;
+    text-shadow: 0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #01c5cc,
+    0 0 82px #01c5cc,
+    0 0 92px #01c5cc,
+    0 0 102px #01c5cc,
+    0 0 151px #01c5cc;;
+    
+  }
+
+  header button {
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    transition: background-color 0.5s;
+    padding: 10px;
+    border-radius: 3px;
+  }
+  .card {
+    background-color: #01c5cc2d;
+    padding: 20px;
+    border-style: solid;
+    border-width: 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px #84c5c7;
+    width: 90%;
+    justify-self: center;
+    align-self: center;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    font-family: "Jersey 10", sans-serif;
+  }
+
+#card-listing {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    columns: 2;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo {
+    display: none;
+  }
+
+  nav {
+    position: unset;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }

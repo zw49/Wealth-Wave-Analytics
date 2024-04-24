@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Wealth Wave Analytics</title>
-    <!-- Add any additional meta tags, stylesheets, or scripts here -->
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@1,600&family=Jersey+10&display=swap"
       rel="stylesheet"
     />
     <link
@@ -27,7 +29,7 @@
         <ul>
           <li>
             <button id="dashboardButton">
-              <i class="fa-solid fa-chart-area"></i>
+              <i class="fa-solid fa-chart-area logo"></i>
               Dashboard
             </button>
           </li>
@@ -35,7 +37,7 @@
         <ul>
           <li>
             <button id="aboutButton">
-              <i class="fa-solid fa-circle-info"></i>
+              <i class="fa-solid fa-circle-info logo"></i>
               About
             </button>
           </li>
@@ -43,23 +45,18 @@
         <ul>
           <li>
             <button id="learnButton">
-              <i class="fa-solid fa-school"></i>
+              <i class="fa-solid fa-school logo"></i>
               Learn
             </button>
           </li>
         </ul>
       </nav>
       <div id="title-container">
-        <i id="logo" class="fa-solid fa-square-poll-vertical"></i>
+        <i class="fa-solid fa-square-poll-vertical logo"></i>
         <h1 id="site-title">Wealth Wave Analytics</h1>
       </div>
 
-      <div id="add-container">
-        <button id="add-icon" class="button" onclick="openInput()">
-          <i class="fa-solid fa-plus"></i>
-        </button>
-        <input type="text" id="inputField" name="add" />
-      </div>
+        <input type="text" id="inputField" name="add" placeholder="Add Stock" />
     </header>
 
     <main>
@@ -250,49 +247,53 @@
           </ol>
           <h1>Videos</h1>
           <div class="videos">
-
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/p7HKvqRI_Bo?si=3g4N-_T8o1PTM_MR"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/ZCFkWDdmXG8?si=nPyXJ1jvAsSB7TnR"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/A7fZp9dwELo?si=CGBw3YnZiZC5uKI2"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/p7HKvqRI_Bo?si=3g4N-_T8o1PTM_MR"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/ZCFkWDdmXG8?si=nPyXJ1jvAsSB7TnR"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/A7fZp9dwELo?si=CGBw3YnZiZC5uKI2"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>Made with varying levels of enthusiasm by Zachary Watson</p>
-      <p>
-        Note: Graphs do not represent real data (api required subscription for
-        historical data)
-      </p>
+      <div class="footer-text">
+        <p>Made with varying levels of enthusiasm by Zachary Watson</p>
+        <p>
+          Note: Graphs do not represent real data (api required subscription for
+          historical data)
+        </p>
+      </div>
+      <label id="theme-toggle">
+        <input type="checkbox" id="theme-toggle-checkbox" />
+        <span id="slider"></span>
+      </label>
     </footer>
 
     <!-- Any additional scripts can be included here, usually before the closing body tag -->

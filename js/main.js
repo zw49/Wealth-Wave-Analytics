@@ -1,8 +1,6 @@
 import getStockPrice from "./api.js";
 import mockData from '../mockdata.json' with {type: 'json'};
 
-
-
 const dummyData = mockData;
 
 const symbols = ["AAPL", "NVDA", "MSFT", "META"];
@@ -12,6 +10,34 @@ for (let key in dummyData) {
 
 const addButton = document.getElementById("inputField");
 
+const themeToggle = document.getElementById("theme-toggle-checkbox");
+const slider = document.getElementById("slider");
+const themeToggleLabel = document.getElementById("theme-toggle");
+
+var head = document.getElementsByTagName("head")[0];
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    head.appendChild(link);
+
+themeToggle.addEventListener("click", () => {
+  var head = document.getElementsByTagName("head")[0];
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    head.appendChild(link);
+  if (themeToggle.checked) {
+    slider.style.left = "15px";
+    themeToggleLabel.style.backgroundColor = "#2196F3";
+    link.href = "../css/theme.css";
+    head.appendChild(link);
+  } else {
+    slider.style.left = "3px";
+    themeToggleLabel.style.backgroundColor = "#cccccc";
+    link.href = "../css/main.css";
+    head.appendChild(link);
+  }
+});
 addButton.addEventListener("keydown", (event) => {
   // Check if the key pressed is Enter
   if (event.key === "Enter") {
@@ -19,14 +45,13 @@ addButton.addEventListener("keydown", (event) => {
     const inputValue = addButton.value.toUpperCase();
     // Display the input value
 
-    if(inputValue.length !== 4){
-        alert("Please input a valid stock symbol")
+    if (inputValue.length !== 4) {
+      alert("Please input a valid stock symbol");
     } else {
-        addButton.value = "";
-        symbols.push(inputValue);
-        createCard(inputValue)
+      addButton.value = "";
+      symbols.push(inputValue);
+      createCard(inputValue);
     }
-
   }
 });
 

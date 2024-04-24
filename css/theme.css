@@ -1,0 +1,174 @@
+/* Main Styles */
+main {
+  padding: 300px 20px 20px 20px;
+  min-height: calc(100% - 200px);
+  margin: 0px;
+  background-color: black;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "Jersey 10", sans-serif;
+}
+
+/* Header Styles */
+header {
+  top: 0;
+  z-index: 1000;
+  position: absolute;
+  background-color: #ffffff00;
+  text-align: center;
+  color: #01c5cc;
+  font-style: normal;
+  padding: 0;
+  font-weight: bold;
+  box-shadow: none;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+header h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 4.5rem;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #01c5cc, 0 0 82px #01c5cc, 0 0 92px #01c5cc, 0 0 102px #01c5cc, 0 0 151px #01c5cc;
+}
+
+header button {
+  font-weight: bold;
+  font-size: large;
+  color: white;
+  transition: border 0.5s;
+  padding: 10px;
+  border-radius: 3px;
+  border: transparent 0.17em solid;
+}
+
+header button:hover {
+  border: currentColor 0.17em solid;
+  background-color: transparent !important;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #01c5cc, 0 0 82px #01c5cc, 0 0 92px #01c5cc, 0 0 102px #01c5cc, 0 0 151px #01c5cc;
+  box-shadow: inset 0 0 0.7em 0 currentColor, 0 0 0.7em 0 currentColor;
+}
+
+/* Card Styles */
+.card {
+  background: linear-gradient(40deg, #213738, #224344, #305a5c);
+  padding: 20px;
+  border-style: solid;
+  border-width: 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px #84c5c7;
+  width: 90%;
+  justify-self: center;
+  align-self: center;
+}
+
+/* Button Styles */
+button {
+  background-color: transparent !important;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  font-family: "Jersey 10", sans-serif;
+}
+
+/* Card Listing Styles */
+#card-listing {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  columns: 2;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Navigation Styles */
+.logo {
+  display: none;
+}
+
+nav {
+  position: unset;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-left: none;
+}
+
+/* Add Container Styles */
+#add-container {
+  position: absolute;
+  right: -175px;
+  top: 10px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.5s;
+}
+
+/* Footer Styles */
+footer {
+  background-color: black;
+}
+
+/* Input Field Styles */
+#inputField {
+  position: absolute;
+  right: 100px;
+  top: 10px;
+  font-family: "Jersey 10", sans-serif;
+  font-size: large;
+  background-color: #1f6466;
+  color: #01c5cc;
+}
+
+#inputField::placeholder {
+  color: #01c5cc;
+}
+
+#inputField:focus {
+  box-shadow: inset 0 0 10px #01c5cc, 0 0 10px #01c5cc;
+}
+
+/* Learn Title Styles */
+#learn-title {
+  background-image: url("/img/binary.jpg");
+}
+
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+  #nav-icon {
+    display: none;
+  }
+
+  nav {
+    background-color: transparent;
+    position: unset;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: none;
+    box-shadow: none;
+    width: auto;
+    border: none;
+  }
+
+  #card-listing {
+    display: grid;
+    gap: 20px;
+    columns: 1;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
