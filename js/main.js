@@ -1,6 +1,11 @@
 import getStockPrice from "./api.js";
 import mockData from '../mockdata.json' with {type: 'json'};
 
+document.addEventListener("DOMContentLoaded", function() {
+  initValidation("myform");
+});
+
+
 const dummyData = mockData;
 
 const symbols = ["AAPL", "NVDA", "MSFT", "META"];
