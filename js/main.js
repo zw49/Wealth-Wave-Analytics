@@ -1,10 +1,9 @@
 import getStockPrice from "./api.js";
 import mockData from '../mockdata.json' with {type: 'json'};
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   initValidation("myform");
 });
-
 
 const dummyData = mockData;
 
@@ -20,25 +19,33 @@ const slider = document.getElementById("slider");
 const themeToggleLabel = document.getElementById("theme-toggle");
 
 var head = document.getElementsByTagName("head")[0];
-    var link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.type = "text/css";
-    head.appendChild(link);
+var link = document.createElement("link");
+link.rel = "stylesheet";
+link.type = "text/css";
+head.appendChild(link);
 
 themeToggle.addEventListener("click", () => {
+  // accessing the HTML head and creating another link element that links to the new css file
   var head = document.getElementsByTagName("head")[0];
-    var link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.type = "text/css";
-    head.appendChild(link);
+  var link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.type = "text/css";
+  head.appendChild(link);
   if (themeToggle.checked) {
+    // change the switch position and background
     slider.style.left = "15px";
     themeToggleLabel.style.backgroundColor = "#2196F3";
+
+    // change the stylesheet
     link.href = "../css/theme.css";
     head.appendChild(link);
   } else {
+    // change the switch position and background
+
     slider.style.left = "3px";
     themeToggleLabel.style.backgroundColor = "#cccccc";
+    // change the stylesheet
+
     link.href = "../css/main.css";
     head.appendChild(link);
   }

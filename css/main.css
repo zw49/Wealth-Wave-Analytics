@@ -33,11 +33,12 @@ header button {
   color: white;
   transition: background-color 0.5s;
   padding: 10px;
-  border: none;
+  border-width: 0;
   display: flex;
   gap: 15px;
   text-shadow: none;
   box-shadow: none;
+  border-radius: 5px;
 }
 header button:hover {
   text-shadow: none;
@@ -114,6 +115,7 @@ body {
   padding: 0;
   height: 100vh;
   font-family: "Ubuntu", sans-serif;
+  font-size: medium;
 }
 
 main {
@@ -379,8 +381,7 @@ input:focus {
 }
 #submit-button button:hover {
   background-color: #3d3d3d !important;
-  border: none;
-  text-shadow: none;
+  border: none;  text-shadow: none;
 }
 
 @media screen and (max-width: 1000px) {
